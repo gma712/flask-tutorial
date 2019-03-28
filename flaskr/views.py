@@ -36,3 +36,6 @@ def uesr_edit(user_id):
 def user_create():
   return 'create a new user'
 
+@app.route('/users/<int:user_id>/delete/', methods=['DELETE'])
+def user_delete(user_id):
+  return NotImplementedError('DELETE')
