@@ -1,3 +1,7 @@
+'''
+SQL table models.
+'''
+
 from sqlalchemy.orm import synonym
 from werkzeug import check_password_hash, generate_password_hash
 
