@@ -29,7 +29,7 @@ COPY requirements.txt ./
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-COPY app /var/app
+COPY . /var/app
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
