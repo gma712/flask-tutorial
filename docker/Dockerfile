@@ -25,11 +25,15 @@ RUN pyenv install 3.6.5 && \
 
 ENV PATH $PATH:/root/.pyenv/shims
 
-COPY requirements.txt ./
+# COPY ./requirements.txt /app
+WORKDIR /app
+VOLUME /app
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-COPY . /var/app
+
+
+# COPY . /var/app
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
